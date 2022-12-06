@@ -26,70 +26,45 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-			margin: 0;
-			font-family: font_default, 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
-					'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-					sans-serif;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			background-color: grey_app_background;
-			color: black_text;
-			scroll-behavior: smooth;
+		margin: 0;
+		font-family: font_default, 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+				'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+				sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		background-color: grey_app_background;
+		color: black_text;
+		scroll-behavior: smooth;
 	}
 
 	ul, ol {
-    list-style: revert !important;
-  }
-
-	pre {
-			display: inline-block;
-			max-width: 100%;
-			white-space: pre-wrap;
-			background-color: grey_light;
-	}
-
-	code {
-			display: inline-block;
-			max-width: 100%;
-			font-family: font_mono, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-			monospace;
-			background-color: grey_light;
-			color: black_primary;
-			font-size: sm;
-	}
+    	list-style: revert !important;
+  	}
 
 	ul {
-			padding: 0;
+		padding: 0;
 	}
 
 	p {
-			a {
-					color: pink_primary;
-					&:hover {
-							color: pink_secondary;
-					}
+		a {
+			color: blue_primary;
+			&:hover {
+				color: blue_secondary;
 			}
+		}
 	}
 
 	a:hover {
-			text-decoration: none;
+		text-decoration: none;
 	}
 
 	::selection {
-			background-color: black_primary;
-			color: white;
-	}
-
-	.dashboard-heading {
-		font-style: normal;
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 27px;
-		color: nav_blue;
+		background-color: black_primary;
+		color: white;
 	}
 
 	.ant-btn-primary {
-		color: pink_primary !important;
+		color: blue_primary !important;
 
 		&:hover, &:focus, &:active{
 			color: #fff !important;
@@ -110,11 +85,11 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.ant-switch-checked{
-		background-color: pink_primary !important;
+		background-color: blue_primary !important;
 	}
 
 	.ant-segmented-item-selected .ant-segmented-item-label {
-		color: pink_primary !important;
+		color: blue_primary !important;
 	}
 
 
