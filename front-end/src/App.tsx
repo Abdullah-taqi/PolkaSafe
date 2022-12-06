@@ -14,12 +14,12 @@ import { GlobalStyle } from './ui-components/GlobalStyle';
 function App() {
 	return (
 		<BrowserRouter>
-			<ThemeProvider theme={styledTheme}>
-				<ConfigProvider theme={antdTheme}>
+			<ConfigProvider theme={antdTheme}>
+				<ThemeProvider theme={styledTheme}>
 					<GlobalStyle/>
 					<AppLayout />
-				</ConfigProvider>
-			</ThemeProvider>
+				</ThemeProvider>
+			</ConfigProvider>
 		</BrowserRouter>
 	);
 }
