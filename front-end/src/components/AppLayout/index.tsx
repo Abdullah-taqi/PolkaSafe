@@ -1,17 +1,21 @@
 // Copyright 2019-2020 @Premiurly/polkassembly authors & contributors
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
+import { Layout } from 'antd';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
-import AppLayout from './components/AppLayout';
+import SwitchRoutes from './SwitchRoutes';
 
-function App() {
+const { Content } = Layout;
+
+const AppLayout = () => {
 	return (
-		<BrowserRouter>
-			<AppLayout />
-		</BrowserRouter>
+		<Layout>
+			<Content>
+				<SwitchRoutes/>
+			</Content>
+		</Layout>
 	);
-}
+};
 
-export default App;
+export default AppLayout;

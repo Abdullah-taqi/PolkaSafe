@@ -2,16 +2,16 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import AppLayout from './components/AppLayout';
+import Home from '../../Screens/Home';
 
-function App() {
+const SwitchRoutes = () => {
 	return (
-		<BrowserRouter>
-			<AppLayout />
-		</BrowserRouter>
+		<Routes>
+			<Route path='/' element={<Home/>} />
+		</Routes>
 	);
-}
+};
 
-export default App;
+export default SwitchRoutes;

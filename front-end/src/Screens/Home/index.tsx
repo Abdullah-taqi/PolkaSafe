@@ -2,16 +2,11 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
-import AppLayout from './components/AppLayout';
-
-function App() {
+const Home = () => {
 	return (
-		<BrowserRouter>
-			<AppLayout />
-		</BrowserRouter>
+		<div>Home</div>
 	);
-}
+};
 
-export default App;
+export default Home;
