@@ -9,7 +9,7 @@ export const antdTheme: ThemeConfig = {
 	token: {
 		boxShadow: '-2px 3px 6px #CAC9F9',
 		boxShadowSecondary: '-3px 4px 10px #CAC9F9',
-		colorBgBase: '#F5F5F5',
+		colorBgBase: '#FBFAFC',
 		colorPrimary: '#645ADF',
 		colorText: '#1F1F1F',
 		colorTextHeading: 'rgba(0, 0, 0, 0.9)',
