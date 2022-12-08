@@ -32,7 +32,8 @@ export const GlobalStyle = createGlobalStyle`
 				sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		background-color: grey_app_background;
+		background-color: #F6F7FE; 
+		/* TODO: Use variable for bg-color */
 		color: black_text;
 		scroll-behavior: smooth;
 	}

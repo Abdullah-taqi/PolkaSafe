@@ -23,6 +23,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@xstyled/styled-components": "^3.7.0",
     "antd": "^5.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

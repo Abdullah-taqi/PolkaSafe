@@ -3,19 +3,22 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 import { Layout } from 'antd';
 import React from 'react';
+import styled from 'styled-components';
 
 import SwitchRoutes from './SwitchRoutes';
 
 const { Content } = Layout;
 
-const AppLayout = () => {
+const AppLayout = ({ className } : { className?: string }) => {
 	return (
-		<Layout>
-			<Content>
+		<Layout className={className}>
+			<Content className='content'>
 				<SwitchRoutes/>
 			</Content>
 		</Layout>
 	);
 };
 
-export default AppLayout;
+export default styled(AppLayout)`
+	background: transparent !important;
+`;
