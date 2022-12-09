@@ -1,7 +1,7 @@
 // Copyright 2022-2023 @Abdullah-taqi/PolkaSafe authors & contributors
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
-import { Layout } from 'antd';
+import { Drawer, Layout } from 'antd';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -25,9 +25,19 @@ const AppLayout = ({ className } : { className?: string }) => {
 				>
 					Sider
 				</Sider>
+				<Drawer
+					placement='left'
+					closable={false}
+					onClose={() => setSideDrawer(false)}
+					open={sideDrawer}
+					getContainer={false}
+					className='w-full max-w-[275px]'
+				>
+					Drawer
+				</Drawer>
 				<Layout className='min-h flex flex-row p-0'>
 					<div className='hidden lg:block w-[275px]'></div>
-					<Content className='bg-purple_app_bg'>
+					<Content className='bg-purple_app_bg pl-8 pr-8'>
 						<SwitchRoutes/>
 					</Content>
 				</Layout>
@@ -44,5 +54,11 @@ export default styled(AppLayout)`
 	}
 	.sider-shadow {
 		box-shadow: -2px 4px 4px rgba(63, 102, 153, 0.5);
+	}
+	.ant-drawer-content-wrapper {
+		max-width: 275px;
+	}
+	.ant-drawer-mask {
+
 	}
 `;
