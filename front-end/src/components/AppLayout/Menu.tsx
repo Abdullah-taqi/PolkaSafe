@@ -3,7 +3,7 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { AddressBookIcon, AppsIcon, AssetsIcon, HomeIcon, MenuIcon, MultisigLockIcon, PolkasafeLogoIcon, PolkasafeTextIcon, SettingsIcon, TransactionIcon } from 'src/ui-components/CustomIcons';
+import { AddressBookIcon, AppsIcon, AssetsIcon, HomeIcon, KeyIcon, MenuIcon, MultisigLockIcon, PolkasafeLogoIcon, PolkasafeTextIcon, SettingsIcon, TransactionIcon, UserPlusIcon } from 'src/ui-components/CustomIcons';
 import styled from 'styled-components';
 
 const menuItems = [
@@ -44,22 +44,33 @@ interface Props {
 }
 
 const Menu: FC<Props> = ({ className }) => {
+	const addresses = [
+		{
+			address: 'John Doe'
+		},
+		{
+			address: 'John Doe'
+		},
+		{
+			address: 'John Doe'
+		}
+	];
 	return (
 		<div className={className}>
 			<section>
 				<Link to='/'>
-					<p className='flex items-center gap-x-2 overflow-hidden justify-center'>
+					<p className='flex items-center gap-x-2 overflow-hidden h-[75px] justify-center'>
 						<PolkasafeLogoIcon className='text-[42px]'/>
 						<PolkasafeTextIcon className='text-[100px]'/>
 					</p>
 				</Link>
 			</section>
-			<section>
+			<section className='mt-3'>
 				<h2 className='px-6 flex items-center gap-x-2'>
 					<MenuIcon className='text-lg' />
 					<span className='font-bold text-lg'>Menu</span>
 				</h2>
-				<ul className='flex flex-col gap-y-0 py-2'>
+				<ul className='flex flex-col py-2'>
 					{
 						menuItems.map((item) => {
 							return <li className='w-full pr-5' key={item.key}>
@@ -80,6 +91,29 @@ const Menu: FC<Props> = ({ className }) => {
 					<MultisigLockIcon className='text-lg' />
 					<span className='font-bold text-lg'>Your Multisigs</span>
 				</h2>
+				<div>
+					<ul className='flex flex-col py-2'>
+						{addresses.map(({ address }) => {
+							return <li className='w-full pr-5' key={address}>
+								<Link className='flex items-center gap-x-3 menu-item-active' to={address} >
+									<p className='w-[5px] h-8'></p>
+									<p className='px-3 py-1.5 font-normal text-base text-blue_secondary flex items-center gap-x-2 flex-1 rounded-md'>
+										<KeyIcon />
+										{address}
+									</p>
+								</Link>
+							</li>;
+						})}
+					</ul>
+					<div className='px-5 py-2'>
+						<article className='flex flex-col items-center gap-y-4 pt-8 pb-6 rounded-md bg-gradient-primary shadow-siderBox'>
+							<UserPlusIcon className='text-5xl' />
+							<p className='text-white max-w-[100px] text-center font-bold'>
+                                Add New Multisig
+							</p>
+						</article>
+					</div>
+				</div>
 			</section>
 		</div>
 	);

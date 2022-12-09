@@ -13,8 +13,12 @@ module.exports = {
 	plugins: [],
 	theme: {
 		extend: {
+			backgroundImage:{
+				'gradient-primary': 'linear-gradient(180deg, #CAC9F9 0%, #332D82 100%)'
+			},
 			boxShadow: {
 				'large': '-3px 4px 10px #CAC9F9',
+				'siderBox': '-6px 10px 10px rgba(0, 0, 0, 0.23)',
 				'small': '-2px 3px 6px #CAC9F9',
 				'top': '0px -3px 4px #CAC9F9'
 			},
