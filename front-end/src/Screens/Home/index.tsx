@@ -3,7 +3,7 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import React from 'react';
-import DashboardCard from 'src/components/Home/DashboardCard';
+// import DashboardCard from 'src/components/Home/DashboardCard';
 
 const Home = () => {
 	return (
@@ -14,7 +14,7 @@ const Home = () => {
 						Dashboard
 					</h2>
 
-					<DashboardCard className='mt-8' />
+					{/* <DashboardCard className='mt-8' /> */}
 				</div>
 
 				<div>Col 2</div>
