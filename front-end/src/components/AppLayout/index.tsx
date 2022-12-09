@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Footer from './Footer';
+import Menu from './Menu';
 import NavHeader from './NavHeader';
 import SwitchRoutes from './SwitchRoutes';
 
@@ -21,9 +22,9 @@ const AppLayout = ({ className } : { className?: string }) => {
 					trigger={null}
 					collapsible={false}
 					collapsed={true}
-					className={'hidden overflow-y-hidden sidebar bg-white lg:block top-0 bottom-0 left-0 h-screen fixed z-40 w-full max-w-[275px] sider-shadow'}
+					className={'hidden overflow-y-hidden sidebar bg-white lg:block top-0 bottom-0 left-0 h-screen fixed z-40 w-full max-w-[200px] sider-shadow'}
 				>
-					Sider
+					<Menu />
 				</Sider>
 				<Drawer
 					placement='left'
@@ -31,12 +32,12 @@ const AppLayout = ({ className } : { className?: string }) => {
 					onClose={() => setSideDrawer(false)}
 					open={sideDrawer}
 					getContainer={false}
-					className='w-full max-w-[275px]'
+					className='w-full max-w-[200px] p-0'
 				>
-					Drawer
+					<Menu />
 				</Drawer>
 				<Layout className='min-h flex flex-row p-0'>
-					<div className='hidden lg:block w-[275px]'></div>
+					<div className='hidden lg:block w-[200px]'></div>
 					<Content className='bg-purple_app_bg pl-8 pr-8'>
 						<SwitchRoutes/>
 					</Content>
@@ -56,9 +57,13 @@ export default styled(AppLayout)`
 		box-shadow: -2px 4px 4px rgba(63, 102, 153, 0.5);
 	}
 	.ant-drawer-content-wrapper {
-		max-width: 275px;
+		max-width: 200px;
 	}
 	.ant-drawer-mask {
 
+	}
+	.ant-drawer-body {
+		padding: 0;
+		margin: 0;
 	}
 `;

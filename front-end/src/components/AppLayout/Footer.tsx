@@ -9,7 +9,7 @@ const { Footer: AntdFooter } = Layout;
 const Footer = () => {
 	return (
 		<AntdFooter className='bg-white flex flex-row items-center p-0 h-[60px]'>
-			<div className='hidden lg:block w-[275px]'></div>
+			<div className='hidden lg:block w-[200px]'></div>
 			<div className='px-8 flex-1'>
 				Footer
 			</div>
